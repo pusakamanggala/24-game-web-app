@@ -2,6 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-main {
-  @apply dark:bg-primary dark:text-secondary bg-secondary text-primary;
+body {
+  @apply transition-colors duration-500 ease-in-out dark:bg-primary dark:text-secondary bg-secondary text-primary;
+}
+
+/* Headings */
+h1 {
+  @apply text-3xl font-extrabold tracking-tight lg:text-4xl; /* Decreased font size */
+}
+
+h2 {
+  @apply pb-1 text-2xl font-semibold tracking-tight first:mt-0;
+}
+
+h3 {
+  @apply text-xl font-semibold tracking-tight;
+}
+
+h4 {
+  @apply text-lg font-semibold tracking-tight;
+}
+
+/* Paragraphs */
+p {
+  @apply leading-7; /* Increased margin top */
+}
+
+/* Lists */
+ul {
+  @apply my-4 ml-4 list-disc; /* Decreased margin and increased indent */
+}
+
+ul > li {
+  @apply mt-2; /* Margin top for list items */
+}
+
+.primary-button {
+  @apply px-4 py-1 transition-transform duration-100 ease-in-out border rounded-lg select-none border-primary dark:border-secondary dark:hover:bg-secondary dark:hover:text-primary hover:bg-primary hover:text-secondary;
+}
+
+.secondary-button {
+  @apply px-4 py-1 transition-transform duration-100 ease-in-out border rounded-lg select-none border-primary dark:border-secondary dark:bg-secondary bg-primary text-secondary dark:text-primary;
+}
+
+.keyboard {
+  @apply w-10 transition-transform duration-100 ease-in-out border rounded-lg select-none border-primary dark:border-secondary aspect-square dark:hover:bg-secondary dark:hover:text-primary hover:bg-primary hover:text-secondary;
+}
+
+.keyboard p {
+  @apply my-auto text-lg font-semibold leading-loose;
+}
+
+/* pressed keyboard */
+.keyboard {
+  @apply active:scale-[0.80] shadow-md;
+}
+
+/* Default state */
+.card-icon {
+  /* Reset filter */
+  filter: none;
+}
+
+/* Dark mode */
+.dark .card-icon {
+  /* Invert colors */
+  filter: invert(100%);
 }
