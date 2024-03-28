@@ -4,6 +4,7 @@ export default {
   safelist: ["grid-cols-2", "grid-cols-3"],
   // dark mode
   darkMode: "class",
+
   theme: {
     container: {
       center: true,
@@ -11,6 +12,9 @@ export default {
       screens: {
         lg: "1124px",
       },
+    },
+    fontFamily: {
+      poppins: ["Poppins", "sans-serif"],
     },
     extend: {
       colors: {
