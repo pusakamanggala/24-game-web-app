@@ -150,6 +150,7 @@ export default function Play() {
   const playAgain = () => {
     setGameState("playing");
     refetchDeck();
+    setSolutionIsFound(false);
   };
 
   const reshuffleDeck = () => {
