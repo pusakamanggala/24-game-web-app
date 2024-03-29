@@ -64,7 +64,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className="flex flex-col flex-1">
       <Joyride
         steps={steps}
         run={!tourCompleted}
@@ -99,68 +99,69 @@ export default function Home() {
           },
         }}
       />
-      <img src={CardIcon} alt="icon" className="h-32 mb-7 card-icon" />
-      <div className="flex flex-col gap-3">
-        <div className="grid w-56 grid-cols-2 p-1 font-semibold border rounded-lg border-primary dark:border-secondary game-mode">
-          <button
-            type="button"
-            title="4 Card Mode"
-            onClick={() => handleSelectMode("4")}
-            className={`rounded-md py-1 ${
-              selectedMode === "4"
-                ? "bg-primary text-secondary dark:bg-secondary dark:text-primary"
-                : ""
-            }`}
+      <div className="flex flex-col items-center justify-center flex-1">
+        <img src={CardIcon} alt="icon" className="h-32 mb-7 card-icon" />
+        <div className="flex flex-col gap-3">
+          <div className="grid w-56 grid-cols-2 p-1 font-semibold border rounded-lg border-primary dark:border-secondary game-mode">
+            <button
+              type="button"
+              title="4 Card Mode"
+              onClick={() => handleSelectMode("4")}
+              className={`rounded-md py-1 ${
+                selectedMode === "4"
+                  ? "bg-primary text-secondary dark:bg-secondary dark:text-primary"
+                  : ""
+              }`}
+            >
+              <p>4 Card</p>
+            </button>
+            <button
+              type="button"
+              title="6 Card Mode"
+              onClick={() => handleSelectMode("6")}
+              className={`rounded-md py-1 ${
+                selectedMode === "6"
+                  ? "bg-primary text-secondary dark:bg-secondary dark:text-primary "
+                  : ""
+              }`}
+            >
+              <p>6 Card</p>
+            </button>
+          </div>
+          <Link
+            onClick={playClickSound}
+            to={`/play/${selectedMode}`}
+            className="!w-56 h-10 keyboard flex items-center justify-center play-button"
           >
-            <p>4 Card</p>
-          </button>
-          <button
-            type="button"
-            title="6 Card Mode"
-            onClick={() => handleSelectMode("6")}
-            className={`rounded-md py-1 ${
-              selectedMode === "6"
-                ? "bg-primary text-secondary dark:bg-secondary dark:text-primary "
-                : ""
-            }`}
+            Play
+          </Link>
+          <Link
+            onClick={playClickSound}
+            to="/how-to-play"
+            className="!w-56 h-10 keyboard flex items-center justify-center tutorial"
           >
-            <p>6 Card</p>
+            How to play
+          </Link>
+          <button
+            onClick={startTour}
+            className="!w-56 h-10 keyboard flex items-center justify-center tutorial"
+          >
+            Start Tour
           </button>
         </div>
-        <Link
-          onClick={playClickSound}
-          to={`/play/${selectedMode}`}
-          className="!w-56 h-10 keyboard flex items-center justify-center play-button"
-        >
-          Play
-        </Link>
-        <Link
-          onClick={playClickSound}
-          to="/how-to-play"
-          className="!w-56 h-10 keyboard flex items-center justify-center tutorial"
-        >
-          How to play
-        </Link>
-        <button
-          onClick={startTour}
-          className="!w-56 h-10 keyboard flex items-center justify-center tutorial"
-        >
-          Start Tour
-        </button>
       </div>
-      <div className="absolute text-center bottom-5">
-        <p className="text-center">
-          Made with ❤️ by{" "}
-          <a
-            href="https://github.com/pusakamanggala"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:underline github"
-          >
-            Pusaka Manggala
-          </a>
-        </p>
-      </div>
-    </>
+
+      <p className="mt-5 text-center">
+        Made with ❤️ by{" "}
+        <a
+          href="https://github.com/pusakamanggala"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:underline github"
+        >
+          Pusaka Manggala
+        </a>
+      </p>
+    </div>
   );
 }
