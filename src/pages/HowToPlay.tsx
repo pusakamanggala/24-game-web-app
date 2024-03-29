@@ -107,6 +107,14 @@ export default function HowToPlay() {
             className="w-24 aspect-auto card-icon"
           />
         </div>
+
+        <div>
+          <iframe
+            src="https://www.youtube.com/embed/pxwHfVRxn7I"
+            className="w-full rounded-lg aspect-video"
+            title="Tutorial Video"
+          />
+        </div>
       </div>
       <div className="flex w-full my-10">
         <Link
