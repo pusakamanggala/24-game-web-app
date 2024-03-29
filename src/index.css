@@ -57,8 +57,10 @@ ul > li {
   @apply my-auto text-lg font-semibold leading-loose;
 }
 
-/* pressed keyboard */
-.keyboard {
+/* button pressed */
+.keyboard,
+.primary-button,
+.secondary-button {
   @apply active:scale-[0.80] shadow-md;
 }
 
