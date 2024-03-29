@@ -160,8 +160,9 @@ export default function Play() {
   };
 
   const handleSubmitAnswer = () => {
-    const numCount = answer.filter((num) => !isNaN(parseFloat(num))).length;
+    playClickSound();
 
+    const numCount = answer.filter((num) => !isNaN(parseFloat(num))).length;
     if (numCount !== deckData?.length) {
       setNotification("Pick all cards");
       return;

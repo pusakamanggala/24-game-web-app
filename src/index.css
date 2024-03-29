@@ -57,13 +57,6 @@ ul > li {
   @apply my-auto text-lg font-semibold leading-loose;
 }
 
-/* button pressed */
-.keyboard,
-.primary-button,
-.secondary-button {
-  @apply active:scale-[0.80] shadow-md;
-}
-
 /* Default state */
 .card-icon {
   /* Reset filter */
