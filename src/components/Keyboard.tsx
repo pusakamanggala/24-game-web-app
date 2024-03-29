@@ -67,6 +67,7 @@ export default function Keyboard({
           className="keyboard"
           onClick={() => handleInputOperator("*")}
           type="button"
+          title="Multiply"
         >
           <p>x</p>
         </button>
@@ -74,6 +75,7 @@ export default function Keyboard({
           className="keyboard"
           onClick={() => handleInputOperator("/")}
           type="button"
+          title="Divide"
         >
           <p>÷</p>
         </button>
@@ -82,6 +84,7 @@ export default function Keyboard({
           className="keyboard"
           onClick={() => handleInputOperator("+")}
           type="button"
+          title="Add"
         >
           <p>+</p>
         </button>
@@ -90,6 +93,7 @@ export default function Keyboard({
           className="keyboard"
           onClick={() => handleInputOperator("-")}
           type="button"
+          title="Subtract"
         >
           <p>-</p>
         </button>
@@ -98,6 +102,7 @@ export default function Keyboard({
           className="keyboard"
           onClick={() => handleInputOperator("(")}
           type="button"
+          title="Open parenthesis"
         >
           <p>(</p>
         </button>
@@ -105,6 +110,7 @@ export default function Keyboard({
           className="keyboard"
           onClick={() => handleInputOperator(")")}
           type="button"
+          title="Close parenthesis"
         >
           <p>)</p>
         </button>
@@ -112,6 +118,7 @@ export default function Keyboard({
           className="h-10 col-span-2 primary-button"
           onClick={onSubmit}
           type="button"
+          title="Submit"
         >
           Submit
         </button>
@@ -119,11 +126,17 @@ export default function Keyboard({
           onClick={handleConfirm}
           className="!w-full col-span-4 primary-button h-10 bg-primary text-secondary dark:bg-secondary dark:text-primary hover:bg-red-500 dark:hover:bg-red-500 give-up-button"
           type="button"
+          title="Give up"
         >
           Give up
         </button>
       </div>
-      <button className="primary-button" onClick={handleDelete} type="button">
+      <button
+        className="primary-button"
+        onClick={handleDelete}
+        type="button"
+        title="Delete"
+      >
         Del
       </button>
       <ConfirmationModal
