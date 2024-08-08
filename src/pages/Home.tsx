@@ -3,6 +3,7 @@ import CardIcon from "../img/cards-icon.svg";
 import { Link } from "react-router-dom";
 import clickSound from "../audio/punchy-taps-ui-2.mp3";
 import Joyride from "react-joyride";
+import Leaderboard from "../components/Leaderboard";
 
 export default function Home() {
   const [selectedMode, setSelectedMode] = useState<string>("6");
@@ -148,6 +149,8 @@ export default function Home() {
           >
             Start Tour
           </button>
+
+          <Leaderboard />
         </div>
       </div>
 

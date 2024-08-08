@@ -10,6 +10,7 @@ import Loading from "../components/Loading";
 import { useParams } from "react-router-dom";
 import Joyride from "react-joyride";
 import clickSound from "../audio/punchy-taps-ui-2.mp3";
+import useSendScore from "../hooks/useSendScore";
 
 export default function Play() {
   const [deckValue, setDeckValue] = useState<string[]>([]);
@@ -18,6 +19,7 @@ export default function Play() {
     "playing"
   );
   const [notification, setNotification] = useState("");
+  const { isSuccess, isLoading, isError, upload } = useSendScore();
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
@@ -177,6 +179,7 @@ export default function Play() {
 
       if (result === 24) {
         setGameState("won");
+        upload(1000, 'user');
       }
       if (result !== 24) {
         setNotification("Your solusion is not correct");
