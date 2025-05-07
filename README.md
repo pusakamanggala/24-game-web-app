@@ -49,5 +49,5 @@ npm run dev
 >This will start the development server and open the application in your default browser.
 
 ## Demo
-- [Live Site](https://www.deckofcardsapi.com/)
+- [Live Site](https://dua-opat.vercel.app)
 - [YouTube](https://www.youtube.com/watch?v=pxwHfVRxn7I)
